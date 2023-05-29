@@ -1,0 +1,253 @@
+/* Styling headers */
+.sectionHeader {
+  color: rgb(79, 129, 189);
+  font-weight: bold;
+}
+
+.subsectionHeader {
+  color: rgb(79, 129, 189);
+  font-style: italic;
+}
+
+.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  text-align: right;
+  padding-right: 1em;
+}
+
+/* Styling table */
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+th,
+td {
+  padding: 1em;
+}
+
+.tableList {
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+  text-align: justify;
+}
+
+/* Styling Content */
+main {
+  margin-left: max(10%, 8rem);
+  padding: 1px 1em;
+  margin-top: 0;
+  padding-top: 5px;
+}
+
+code {
+  font-family: Consolas, "courier new";
+  background-color: #f1f1f1;
+  word-break: break-word;
+}
+
+section > code {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.sample-output {
+  padding: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+body {
+  margin: 0;
+}
+img {
+  display: block;
+  margin: 1em auto;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+}
+
+ul {
+  list-style-type: initial;
+}
+
+ul li,
+ol li {
+  padding: 2px;
+}
+
+/* Styling nav bar */
+#sidebar {
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  min-width: 8rem;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar a {
+  display: block;
+  color: black;
+  padding: 1em;
+  text-decoration: none;
+}
+
+#sidebar #nav-title {
+  background-color: #04aa6d;
+  color: white;
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  text-align: center;
+}
+
+#sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+#back-to-top {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #d6e3f0;
+  margin: auto auto 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  /* styling navbar */
+  #sidebar #nav-title {
+    display: none;
+  }
+  #sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-bottom: 5px solid #04aa6d;
+    flex-wrap: wrap;
+  }
+  #sidebar a {
+    display: inline-block;
+    padding: 0.5rem;
+    font-size: small;
+    height: auto;
+  }
+
+  #back-to-top {
+    position: fixed;
+    bottom: 0rem;
+    right: 0.5rem;
+    opacity: 0.2;
+    padding: 1rem !important;
+    height: 2rem !important;
+    width: 2rem !important;
+    font-size: 2rem !important;
+  }
+
+  #back-to-top:hover {
+    color: inherit;
+  }
+
+  main {
+    margin-left: 0;
+    padding-top: 2rem;
+  }
+
+  html {
+    scroll-padding-top: 3rem;
+  }
+
+  h1 {
+    font-size: x-large;
+  }
+
+  h2 {
+    font-size: large;
+  }
+
+  h3 {
+    font-size: medium;
+  }
+
+  h4 {
+    font-size: small;
+  }
+
+  table {
+    margin: 0;
+  }
+
+  th,
+  td {
+    padding: 0.5em;
+  }
+
+  .tableList {
+    text-align: left;
+  }
+
+  /* styling code */
+  .sample-output {
+    display: inline-block;
+    margin: auto;
+    width: 90%;
+  }
+
+  code {
+    font-family: monospace;
+  }
+
+  section > code {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 604px) {
+  main {
+    padding-top: 4rem;
+  }
+
+  html {
+    scroll-padding-top: 4.5rem;
+  }
+}
