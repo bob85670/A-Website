@@ -1,2 +1,4 @@
 # A Website
-This is a simple website for displaying assignment guideline.
+This is a simple website for displaying assignment guideline.     
+
+Open index.html
